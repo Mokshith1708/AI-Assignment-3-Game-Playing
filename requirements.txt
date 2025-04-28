@@ -1,0 +1,4 @@
+gym
+gym-chess
+chess
+numpy
