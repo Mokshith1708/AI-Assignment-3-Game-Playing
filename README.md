@@ -48,3 +48,7 @@ cd ..
 python main.py
 # choose the options displayed to run the code.
 ```
+
+
+- ### All the videos are in PPT and also in videos folder.
+- ### PPT is also in repo with name AI_3_CS22B046_CS22B059.pptx
