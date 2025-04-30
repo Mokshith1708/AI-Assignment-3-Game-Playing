@@ -1,5 +1,7 @@
 import chess
-from utils.evaluation import evaluate_board
+# from utils.evaluation import evaluate_board
+from utils.evaluation1 import evaluate_board
+
 
 class AlphaBetaAgent:
     def __init__(self, depth=2):
