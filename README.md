@@ -1,7 +1,6 @@
 # CS514L-CS22B046_CS22B059
+
 ## Assignment-3
-
-
 
 ### 🛠️ Setup Instructions
 
@@ -12,18 +11,23 @@ git clone https://github.com/Mokshith1708/AI-Assignment-3-Game-Playing
 cd AI-Assignment-3-Game-Playing
 
 ```
+
 #### 2. Install Dependencies
-``` bash
+
+```bash
 pip install -r requirements.txt
 ```
 
 #### 3. Setting up gym env
-``` bash
-git clone https://github.com/iamlucaswolf/gym-chess.git 
+
+```bash
+git clone https://github.com/iamlucaswolf/gym-chess.git
 cd gym-chess
 ```
+
 - In gym-chess folder open pyproject.toml file
 - Go to the end of file and replace the below with the given
+
 ```bash
 # before
 [build-system]
@@ -37,18 +41,20 @@ build-backend = "poetry.masonry.api"
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 ```
-- Now run this command 
+
+- Now run this command
+
 ```
-python install -e.
+pip install -e .
 ```
 
 #### 4. running the code
+
 ```bash
 cd ..
 python main.py
 # choose the options displayed to run the code.
 ```
-
 
 - ### All the videos are in PPT and also in videos folder.
 - ### PPT is also in repo with name AI_3_CS22B046_CS22B059.pptx
