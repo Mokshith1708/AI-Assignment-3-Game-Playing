@@ -8,7 +8,6 @@ defusedxml==0.7.1
 future==1.0.0
 gym==0.17.3
 gym-notices==0.0.8
--e git+https://github.com/iamlucaswolf/gym-chess.git@6a5eb43650c400a556505ec035cc3a3c5792f8b2#egg=gym_chess
 numpy==2.2.5
 opencv-python==4.11.0.86
 pillow==11.2.1

@@ -67,6 +67,7 @@ def play_game(agent_white, agent_black, record=False):
 
         if record:
             save_board_as_png(board, len(moves))
+            
 
     print("The game is over.")
     if board.is_checkmate():
@@ -93,9 +94,39 @@ def play_game(agent_white, agent_black, record=False):
         save_pgn(moves)
         create_video_from_images()
 
+def choose_agent(player_name):
+    print(f"\nSelect agent for {player_name}:")
+    print("1. Minimax")
+    print("2. AlphaBeta")
+    while True:
+        try:
+            agent_choice = int(input("Enter choice (1 or 2): "))
+            if agent_choice in [1, 2]:
+                break
+            else:
+                print("Please enter 1 or 2.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    
+    while True:
+        try:
+            depth = int(input(f"Enter depth for {player_name}'s agent: "))
+            if depth > 0:
+                break
+            else:
+                print("Depth must be positive.")
+        except ValueError:
+            print("Invalid input. Please enter a positive integer.")
+    
+    if agent_choice == 1:
+        return MinimaxAgent(depth=depth)
+    else:
+        return AlphaBetaAgent(depth=depth)
+
 if __name__ == "__main__":
-    minimax1 = MinimaxAgent(depth=1)
-    minimax2 = MinimaxAgent(depth=4)
-    alphabeta1 = AlphaBetaAgent(depth=1)
-    alphabeta2 = AlphaBetaAgent(depth=4)
-    play_game(alphabeta1, alphabeta2, record=True)
+    print("=== Chess Game Setup ===")
+    agent_white = choose_agent("White Player")
+    agent_black = choose_agent("Black Player")
+    
+    play_game(agent_white, agent_black, record=True)
+
